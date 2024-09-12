@@ -43,7 +43,8 @@
             // Créer le graphique dans la div
             var chart = new google.visualization.ColumnChart(document.getElementById('commits_chart'));
             chart.draw(dataTable, options);
-          });
+          })
+          .catch(error => console.error('Erreur lors de la récupération des données :', error));
       }
     </script>
   </body>
